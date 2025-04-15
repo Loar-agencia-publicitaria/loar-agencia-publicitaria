@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4fc;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #ff99cc, #cc99ff);
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: white;
+    color: #7a3e9d;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    background-color: #eee;
+    margin-top: 30px;
+}
