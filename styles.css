@@ -103,5 +103,22 @@ footer {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size:
+    font-size: 16px;
+}  
+
+.redes-sociales {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .redes-sociales a {
+    color: #7a3e9d;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+  }
+  
+  .redes-sociales a:hover {
+    text-decoration: underline;
+  }
   
