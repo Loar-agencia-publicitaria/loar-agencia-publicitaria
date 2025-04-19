@@ -46,9 +46,21 @@ header {
     font-weight: bold;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #d50f72, #560148);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: 
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
 footer {
     padding: 20px;
-    background-color: #eee;
+    background: linear-gradient(to right, #ff99cc, #cc99ff);
     margin-top: 30px;
 }
 
@@ -141,28 +153,60 @@ footer {
     color: #555;
   }
   
-  /* Sección Contacto */
-  #contacto {
-    padding: 60px 20px;
-    background-color: #e0f7fa;
-    text-align: center;
-  }
-  
-  #contacto form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  #contacto input,
-  #contacto textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}  
+/* SECCIÓN: CONTACTO */
+#contacto {
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contacto h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #7a3e9d;
+  font-weight: 700;
+}
+
+#contacto form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto button[type="submit"] {
+  background-color: #7a3e9d;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#contacto button[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #d50f72, #560148); /* cambio de dirección como efecto visual */
+}
 
 .redes-sociales {
   display: flex;
@@ -176,7 +220,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #7a3e9d;
   font-weight: bold;
   font-size: 14px;
 }
@@ -184,7 +228,7 @@ footer {
 .redes-sociales i {
   font-size: 24px;
   padding: 15px;
-  background: linear-gradient(to right, #ff99cc, #cc99ff);
+  background: linear-gradient(to right, #ffffff, #ffffff);
   border-radius: 50%;
   margin-bottom: 8px;
   transition: transform 0.3s ease;
@@ -192,6 +236,9 @@ footer {
 
 .redes-sociales a:hover i {
   transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #d50f72, #560148);
+  color: white; /* para cambiar el color del ícono */
 }
 
 .redes-sociales i {
@@ -204,7 +251,7 @@ footer {
 }
 
 .redes-sociales a span:hover {
-  color: #ff99cc; /* o el color que prefieras al pasar el mouse */
+  color: #000000; /* o el color que prefieras al pasar el mouse */
 }
 
 h1 {
@@ -231,4 +278,309 @@ h3 {
 
 .servicio h3 {
   font-weight: bold;
+}
+
+#testimonios {
+  padding: 60px 30px;
+  background-color: #e0f7fa;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#testimonios h2 {
+  font-size: 28px;
+  color: #7a3e9d;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.carrusel-testimonios {
+  display: flex;
+  justify-content: center;      /* 🔥 Esto centra el carrusel */
+  overflow-x: auto;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  max-width: 1200px;            /* Limita ancho del carrusel */
+  margin: 0 auto;               /* 🔥 Centra el contenedor horizontalmente */
+}
+
+.testimonio {
+  flex: 0 0 300px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.testimonio:hover {
+  transform: scale(1.05);
+}
+
+.testimonio img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonio h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.testimonio .negocio {
+  font-size: 14px;
+  font-weight: bold;
+  color: #7a3e9d;
+  margin-bottom: 10px;
+}
+
+.testimonio .mensaje {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+.navbar {
+  background-color: white;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #7a3e9d;
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+#sobre-nosotros {
+  padding: 60px 30px;
+  background-color: #fdf3ff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#sobre-nosotros h2 {
+  font-size: 28px;
+  color: #7a3e9d;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.sobre-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobre-grid p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.sobre-imagen {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === ANIMACIONES SUAVES === */
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== RESPONSIVE - PANTALLAS PEQUEÑAS ======== */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    width: 120px;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .servicios-grid,
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-imagen {
+    max-width: 90%;
+  }
+
+  #contacto form {
+    width: 90%;
+  }
+
+  .redes-sociales {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
+
+  .whatsapp-float {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* Estilo del ícono hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.activo {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navbar-logo {
+  max-height: 50px;
+  width: auto;
+}
+
+/* 🟣 OPTIMIZACIÓN MÓVIL */
+@media (max-width: 768px) {
+  .redes-sociales {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .redes-sociales i {
+    font-size: 28px;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.servicio img {
+  width: 300px;        /* Tamaño base en escritorio */
+  max-width: 100%;     /* Que no se desborde nunca del contenedor */
+  height: auto;        /* Proporción mantenida */
+  display: block;      /* Para poder centrarla */
+  margin: 0 auto;      /* Centrada horizontalmente */
+  transition: transform 0.3s ease;
+}
+
+/* Opcional: efecto al pasar el mouse */
+.servicio img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .servicio img {
+    width: 100%;     /* Que use todo el ancho disponible en móvil */
+    max-width: 280px;
+  }
+
+  .servicio {
+    padding: 20px;
+    text-align: center;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOAR Agencia Publicitaria</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts: Montserrat -->
@@ -9,6 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+   <!-- Barra de navegación -->
+   <nav class="navbar">
+    <div class="navbar-container">
+      <img src="https://i.ibb.co/My7s7Rjr/Foto-de-face.png" alt="Logo LOAR" class="navbar-logo">
+          <!-- Botón hamburguesa -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <ul class="navbar-menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
     <header>
       <img src="https://i.ibb.co/4nKFxhYT/P-gina-2.png" alt="Logo LOAR" class="logo"> 
       <h1 class="marca">LOAR</h1>
@@ -24,7 +43,7 @@ title="Escríbenos por WhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
 <!-- SECCIÓN: SERVICIOS CON IMÁGENES -->
-<section id="servicios">
+<section id="servicios" class="animar">
   <h2>Nuestros Servicios</h2>
   <div class="servicios-grid">
     <div class="servicio">
@@ -45,22 +64,47 @@ title="Escríbenos por WhatsApp">
   </div>
 </section>
   
-  <!-- SECCIÓN: TESTIMONIOS -->
-  <section id="testimonios">
-    <h2>Lo que dicen nuestros clientes</h2>
+<!-- SECCIÓN: TESTIMONIOS -->
+<section id="testimonios" class="animar">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="carrusel-testimonios">
     <div class="testimonio">
-      <p>“Gracias a LOAR ahora mis redes se ven increíbles y tengo más ventas.”</p>
-      <strong>- Ana, dueña de cafetería</strong>
+      <img src="https://i.ibb.co/wrF1DfCq/cliente1.png" alt="Cliente 1">
+      <h3>Arely López</h3>
+      <p class="negocio">Cafetería Dulce Aroma</p>
+      <p class="mensaje">"Gracias a LOAR, mis redes tienen el estilo profesional que buscaba. ¡Recomiendo totalmente!"</p>
     </div>
     <div class="testimonio">
-      <p>“El diseño que recibimos fue justo lo que imaginamos, ¡excelente equipo!”</p>
-      <strong>- Carlos, consultor independiente</strong>
+      <img src="https://i.ibb.co/YB47zhn7/cliente2.png" alt="Cliente 2">
+      <h3>Pamela Hernández</h3>
+      <p class="negocio">Clínica Sonríe</p>
+      <p class="mensaje">"El cambio visual y de estrategia fue inmediato. Su equipo es muy profesional."</p>
     </div>
-  </section>
-  
+    <div class="testimonio">
+      <img src="https://i.ibb.co/1YnRPrVW/cliente3.png" alt="Cliente 3">
+      <h3>Mario Gómez</h3>
+      <p class="negocio">Salón Belleza Vital</p>
+      <p class="mensaje">"Los contenidos lucen increíbles. Me encantó el branding que me propusieron."</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: SOBRE NOSOTROS -->
+<section id="sobre-nosotros" class="animar">
+  <h2>Sobre Nosotros</h2>
+  <div class="sobre-grid">
+    <p>
+      En LOAR Agencia Publicitaria, nos apasiona impulsar marcas con creatividad y estrategia.
+      Somos un equipo dedicado a transformar ideas en resultados a través del marketing digital,
+      branding y contenido de alto impacto.
+    </p>
+    <img src="https://i.ibb.co/XZY7KSr4/2.png" alt="Equipo LOAR" class="sobre-imagen">
+  </div>
+</section>
+
   <!-- SECCIÓN: CONTACTO -->
-  <section id="contacto">
-    <h2>Contacto</h2>
+  <section id="contacto" class="animar">
+    <h2>Contactanos</h2>
     <form action="https://formsubmit.co/loaragenciapublicitaria@gmail.com" method="POST">
         <input type="hidden" name="_next" value="https://loar-agencia-publicitaria.netlify.app/gracias.html">
 
@@ -87,4 +131,31 @@ title="Escríbenos por WhatsApp">
             <span>WhatsApp</span>
           </a>
         </div>
-        
+         <!-- ANIMACIÓN AL HACER SCROLL -->
+<script>
+  const elementos = document.querySelectorAll('.animar');
+
+  const mostrarElemento = (element) => {
+    const top = element.getBoundingClientRect().top;
+    const height = window.innerHeight;
+
+    if (top < height - 100) {
+      element.classList.add('animado');
+    }
+  }
+
+  const scrollHandler = () => {
+    elementos.forEach((el) => mostrarElemento(el));
+  }
+
+  window.addEventListener('scroll', scrollHandler);
+  window.addEventListener('load', scrollHandler);
+</script>
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('activo');
+  }
+</script>
+
+</body> <!-- <---- este es el que faltaba -->
+</html>
