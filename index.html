@@ -14,6 +14,56 @@
   <meta property="og:description" content="Impulsamos marcas con creatividad y estrategia. Descubre nuestros servicios.">
   <meta property="og:image" content="https://i.ibb.co/4nKFxhY/P-gina-2.png">
   <meta property="og:url" content="https://loar-agencia-publicitaria.netlify.app/">
+<!-- AQUI VA EL SCRIPT JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LOAR Agencia Publicitaria",
+    "url": "https://loar-agencia-publicitaria.netlify.app",
+    "logo": "https://i.ibb.co/4nKFxhY/P-gina-2.png",
+    "sameAs": [
+      "https://www.facebook.com/loaragenciapublicitaria",
+      "https://www.instagram.com/loaragenciapublicitaria",
+      "https://wa.me/50378973045"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+50378973045",
+      "contactType": "customer service",
+      "areaServed": "SV",
+      "availableLanguage": "Spanish"
+    }
+  }
+  </script>  
+  <!-- SCHEMA DE TIPO SERVICE -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Marketing Digital y Publicidad",
+      "provider": {
+        "@type": "Organization",
+        "name": "LOAR Agencia Publicitaria",
+        "url": "https://loar-agencia-publicitaria.netlify.app"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "El Salvador"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "SV"
+          }
+        },
+        "availableLanguage": "Spanish"
+      }
+    }
+  </script>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts: Montserrat -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -52,6 +102,7 @@ target="_blank"
 title="Escríbenos por WhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
+<main>
 <!-- SECCIÓN: SERVICIOS CON IMÁGENES -->
 <section id="servicios" class="animar">
   <h2>Nuestros Servicios</h2>
@@ -124,7 +175,8 @@ title="Escríbenos por WhatsApp">
       <button type="submit">Enviar mensaje</button>
     </form>
   </section>
-  
+</main>
+
     <footer>
         <p>&copy; 2025 LOAR Agencia Publicitaria</p>
         <div class="redes-sociales">
@@ -141,6 +193,7 @@ title="Escríbenos por WhatsApp">
             <span>WhatsApp</span>
           </a>
         </div>
+      </footer>
          <!-- ANIMACIÓN AL HACER SCROLL -->
 <script>
   const elementos = document.querySelectorAll('.animar');
