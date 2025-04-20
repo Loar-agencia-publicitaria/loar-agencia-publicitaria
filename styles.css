@@ -584,3 +584,22 @@ html {
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  #contacto form {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    font-size: 15px;
+  }
+
+  #contacto button[type="submit"] {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
